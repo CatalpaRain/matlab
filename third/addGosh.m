@@ -1,0 +1,9 @@
+t=imread('D:\Download\Photo\OIP.jfif');
+[m,n,z]=size(t);
+y=0+0.1*randn(m,n);
+t1=double(t)/255;
+t1=t1+y;
+t1=t1*255;
+t1=uint8(t1);
+subplot(1,2,1),imshow(t),title('原图');
+subplot(1,2,2),imshow(t1),title('加入均值为0，标准差为0.1的高斯噪声后');
